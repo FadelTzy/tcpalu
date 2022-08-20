@@ -1,0 +1,12 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Tingkat_tk extends Model
+{
+    use HasFactory;
+    protected $guarded = [];
+}

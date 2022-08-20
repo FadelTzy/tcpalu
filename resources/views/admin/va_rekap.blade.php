@@ -1,0 +1,188 @@
+@extends('layouts.vl_admin')
+@section('content')
+    <!--start page wrapper -->
+    <div class="page-wrapper">
+        <div class="page-content">
+            <h6 class="mb-0 text-uppercase">Data Rekap</h6>
+            <hr />
+            <div class="card">
+                <div class="card-header">
+                    <button type="button" class="btn btn-primary btnrekap btn-sm" id="btnrekap" name="btnrekap">Eksport
+                        Excel</button>
+                </div>
+                <div class="card-body">
+                    <div class="table p-3">
+                        <table id="example" class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>NIM</th>
+                                    <th>Nama</th>
+                                    <th>Prodi</th>
+                                    <th>No Telp</th>
+                                    <th>Tahun Lulus</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form name="formsrekap" id="formsrekap" method="post">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Form Unduh Rekap</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body mx-3">
+                        <div class="form mb-3">
+                            <label data-error="wrong" data-success="right" for="kd_univ">Pilih Universitas</label>
+                            <select name="kd_univ" id="kd_univ" class="form-control">
+                                <option value="">Pilih</option>
+                                @foreach ($datauniv as $item)
+                                    <option value={{ $item->kd_univ }}>
+                                        {{ $item->nm_univ }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="form mb-3">
+                            <label data-error="wrong" data-success="right" for="kode_prodi">Pilih Program Studi</label>
+                            <select name="kode_prodi" id="kode_prodi" class="form-control">
+                                <option value="">Pilih</option>
+                                @foreach ($dataprodi as $item)
+                                    <option value={{ $item->kode_prodi }}>
+                                        {{ $item->nama_prodi }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="form mb-3">
+                            <label data-error="wrong" data-success="right" for="tahun_lulus">Pilih Tahun</label>
+                            <select name="tahun_lulus" id="tahun_lulus" class="form-control">
+                                <option value="">Pilih</option>
+                                @foreach ($datatahun as $item)
+                                    <option value={{ $item->nilai_tl }}>
+                                        {{ $item->nilai_tl }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="submit" name="submit">Cetak Rekap</button>
+
+                        {{-- <div id="divbtn" name="divbtn">
+                            <a class="btn btn-success exportbtn" id="exportbtn" href="#" name="exportbtn">
+                                Unduh File Excel
+                            </a>
+                        </div> --}}
+                    </div>
+                    @csrf
+                </form>
+            </div>
+        </div>
+    </div>
+@endsection
+
+@push('prepend-script')
+    <!-- Vendor js -->
+    <script src="vertical/assets/js/jquery.min.js"></script>
+@endpush
+
+@push('addon-script')
+    <script>
+        var url = window.location.origin;
+        // $('#divbtn').addClass('d-none');
+
+
+        $('#submit').on('click', function(id) {
+            var tahun = $("#tahun_lulus").val();
+            var prodi = $("#kode_prodi").val();
+            var univ = $("#kd_univ").val();
+            console.log(tahun);
+
+
+            var ini = "{{ url('kuesioner/export?tahun_lulus=') }}" + tahun + "&univ=" + univ + "&prodi=" + prodi;
+            console.log(ini);
+            window.open(ini, "_blank");
+
+        });
+
+
+        $(document).ready(function() {
+            tabel = $("#example").DataTable({
+                columnDefs: [{
+                        targets: 0,
+                        width: "10%",
+                    }, {
+                        targets: 1,
+                        width: "32%",
+                    },
+                    {
+                        targets: 2,
+                        width: "32%",
+                    },
+                    {
+                        targets: 3,
+                        width: "26%",
+                    },
+
+                ],
+                processing: true,
+                serverSide: true,
+                ajax: {
+                    url: "{{ url('admin/rekap') }}",
+                },
+                columns: [{
+                    nama: 'DT_RowIndex',
+                    data: 'DT_RowIndex'
+                }, {
+                    nama: 'nimhsmsmh',
+                    data: 'nimhsmsmh'
+                }, {
+                    nama: 'nmmhsmsmh',
+                    data: 'nmmhsmsmh'
+                }, {
+                    nama: 'kdpstmsmh',
+                    data: 'kdpstmsmh'
+                }, {
+                    nama: 'telpomsmh',
+                    data: 'telpomsmh'
+                }, {
+                    nama: 'tahun_lulus',
+                    data: 'tahun_lulus'
+                }, {
+                    nama: 'aksi',
+                    data: 'aksi'
+                }, ],
+
+            });
+
+            $(".btnrekap").click(function() {
+                var title = " koko";
+                $('#exampleModal').modal('show');
+            });
+
+            // $("#tahun_lulus").on("change", function() {
+            //     var nilai = $(this).val();
+            //     $("#exportbtn").attr("href", nilai);
+            //     if (nilai == "") {
+            //         $('#divbtn').addClass('d-none');
+
+            //     } else {
+            //         $('#divbtn').removeClass('d-none');
+
+            //     }
+
+            // });
+
+        });
+
+        function btnexport() {
+            alert("koko");
+        }
+    </script>
+@endpush
