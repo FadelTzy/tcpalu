@@ -20,6 +20,7 @@
         @include('includes.home.style')
 
         @stack('addon-style')
+        @yield('css')
 
     </head>
 

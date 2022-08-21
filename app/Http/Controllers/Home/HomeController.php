@@ -13,7 +13,7 @@ class HomeController extends Controller
         // return view('home');
 
 
-        return view('home1');
+        return view('tcpalu');
     }
     public function kuesioner()
     {

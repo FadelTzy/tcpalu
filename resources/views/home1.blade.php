@@ -8,21 +8,31 @@
 @section('title')
     UNM::Tracer Studi
 @endsection
+@section('css')
+<style>
+    .hvr:hover{
+        color: #20AA3E;
+        background-color: yellow;
 
+    }
+  
+</style>
+@endsection
 @section('content')
+
     <div class="d-flex flex-column flex-root">
         <!--begin::Header Section-->
         <div class="mb-0" id="home">
             <!--begin::Wrapper-->
             <div class="bgi-no-repeat bgi-cover bgi-size-contain bgi-position-x-center bgi-position-y-bottom landing-dark-bg"
-                style="background: linear-gradient(0deg, rgba(37, 53, 197, 0.3), rgb(11, 22, 124)), url(bg/pinisi.jpg), no-repeat; background-repeat: no-repeat; background-position: center; background-size:cover; height:100vh">
+            style="background: linear-gradient(0deg, rgba(89, 255, 60, 0.3), rgb(255, 255, 255)), url(bg/unisa.jpg), no-repeat; background-repeat: no-repeat; background-position: center; background-size:cover; height:100vh">
                 <!--begin::Header-->
                 <div class="landing-header" data-kt-sticky="true" data-kt-sticky-name="landing-header"
                     data-kt-sticky-offset="{default: '200px', lg: '300px'}">
                     <!--begin::Container-->
                     <div class="container">
                         <!--begin::Wrapper-->
-                        <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-flex align-items-center justify-content-left">
                             <!--begin::Logo-->
                             <div class="d-flex align-items-center flex-equal">
                                 <!--begin::Mobile menu toggle-->
@@ -45,9 +55,9 @@
                                 <!--end::Mobile menu toggle-->
                                 <!--begin::Logo image-->
                                 <a href="home">
-                                    <img alt="Logo" src="assets/media/logos/unm-light.png"
+                                    <img alt="Logo" src="assets/media/logos/logou.png"
                                         class="logo-default h-50px h-lg-38px" />
-                                    <img alt="Logo" src="assets/media/logos/unm-dark.png"
+                                    <img alt="Logo" src="assets/media/logos/logou.png"
                                         class="logo-sticky h-50px h-lg-38px" />
                                 </a>
                                 <!--end::Logo image-->
@@ -67,7 +77,7 @@
                                         <!--begin::Menu item-->
                                         <div class="menu-item">
                                             <!--begin::Menu link-->
-                                            <a class="menu-link nav-link active py-3 px-4 px-xxl-6" href="#kt_body"
+                                            <a class="menu-link nav-link active py-3 px-4 px-xxl-6 d text-dark" href="#kt_body"
                                                 data-kt-scroll-toggle="true" data-kt-drawer-dismiss="true">Home</a>
                                             <!--end::Menu link-->
                                         </div>
@@ -75,7 +85,7 @@
                                         <!--begin::Menu item-->
                                         <div class="menu-item">
                                             <!--begin::Menu link-->
-                                            <a class="menu-link nav-link py-3 px-4 px-xxl-6" href="#petunjuk"
+                                            <a class="menu-link nav-link py-3 px-4 px-xxl-6 hvr text-dark" href="#petunjuk"
                                                 data-kt-scroll-toggle="true" data-kt-drawer-dismiss="true">Petunjuk</a>
                                             <!--end::Menu link-->
                                         </div>
@@ -83,7 +93,7 @@
                                         <!--begin::Menu item-->
                                         <div class="menu-item">
                                             <!--begin::Menu link-->
-                                            <a class="menu-link nav-link py-3 px-4 px-xxl-6" href="#lulusan"
+                                            <a class="menu-link nav-link py-3 px-4 px-xxl-6 hvr text-dark" href="#lulusan"
                                                 data-kt-scroll-toggle="true" data-kt-drawer-dismiss="true">Lulusan</a>
                                             <!--end::Menu link-->
                                         </div>
@@ -91,7 +101,7 @@
                                         <!--begin::Menu item-->
                                         <div class="menu-item">
                                             <!--begin::Menu link-->
-                                            <a class="menu-link nav-link py-3 px-4 px-xxl-6" href="#tentang"
+                                            <a class="menu-link nav-link py-3 px-4 px-xxl-6 hvr text-dark" href="#tentang"
                                                 data-kt-scroll-toggle="true" data-kt-drawer-dismiss="true">Tentang</a>
                                             <!--end::Menu link-->
                                         </div>
@@ -99,7 +109,7 @@
                                         <!--begin::Menu item-->
                                         <div class="menu-item">
                                             <!--begin::Menu link-->
-                                            <a class="menu-link nav-link py-3 px-4 px-xxl-6" href="#kontak"
+                                            <a class="menu-link nav-link py-3 px-4 px-xxl-6 hvr text-dark" href="#kontak"
                                                 data-kt-scroll-toggle="true" data-kt-drawer-dismiss="true">Kontak</a>
                                             <!--end::Menu link-->
                                         </div>
@@ -111,7 +121,7 @@
                             <!--end::Menu wrapper-->
                             <!--begin::Toolbar-->
                             <div class="flex-equal text-end ms-1">
-                                <a href="login" class="btn btn-success">Login</a>
+                                <a href="login" class="btn btn-success" id="logintext">Login</a>
                             </div>
                             <!--end::Toolbar-->
                         </div>
@@ -125,27 +135,27 @@
                     <!--begin::Heading-->
                     <div class="text-center mb-6 mt-6 mb-lg-10 pb-10 pb-lg-20" style="margin: 40% 10%">
                         <!--begin::Title-->
-                        <h1 class="text-white lh-base fw-bolder fs-2x fs-lg-3x mb-2 ">Tracer Study
+                        <h1  style="background: linear-gradient(to right, #12CE5D 0%, #FFD80C 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;" class="lh-base fw-bolder fs-2x fs-lg-3x mb-2 ">Tracer Study
                             <br />
                             <span
                                 style="background: linear-gradient(to right, #12CE5D 0%, #FFD80C 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">
-                                <span id="kt_landing_hero_text">Universitas Negeri Makassar</span>
+                                <span id="kt_landing_hero_text">UNIVERSITAS ALKHAIRAAT PALU</span>
                             </span>
                         </h1>
                         <br />
-                        <h2 class="text-white lh-base fw-bolder fs-1x fs-lg-1x mb-15">Merupakan Aplikasi Untuk Melakukan
-                            Tracing Terhadap Aktifitas Alumni/Lulusan Dari Universitas Negeri Makassar</h2>
+                        <br>
+                        <br>
                         <!--end::Title-->
                         <!--begin::Action-->
                         <div class="d-flex justify-content-center">
                             <div style="margin-right:3%;">
-                                <a href="login" class="btn btn-primary" style="width:100%;margin-bottom:4px">Mulai Mengisi
+                                <a href="login" class="btn btn-sm btn-light-primary" style="width:100%;margin-bottom:4px">Mulai Mengisi
                                     <br> Tracer
                                     Study</a> <br>
                                 <p class="text-white"> <em> Diisi oleh Alumni </em> </p>
                             </div>
                             <div>
-                                <a href="survei" style="margin-bottom:4px" class="btn btn-success ">User Survei <br>
+                                <a href="survei" style="margin-bottom:4px" class="btn btn-light-warning btn-sm btn-success ">User Survei <br>
                                     (Kepuasan Pengguna)</a>
                                 <p class="text-white"> <em> Diisi oleh Pengguna / Pimpinan <br> Alumni UNM </em> </p>
                             </div>
@@ -154,43 +164,11 @@
                     </div>
                     <!--end::Heading-->
 
-                    <!--begin::Highlight-->
-                    <div class=" d-flex flex-stack flex-wrap flex-md-nowrap card-rounded shadow text-center"
-                        style="background: linear-gradient(0deg, #21634c 0%, #6ec6a8 100%);z-index: 1;max-width: 1100px;position: relative; margin-bottom: -15rem;"
-                        style="margin-top: 1000px">
-                        <!--begin::Content-->
-                        <div class="my-2 mx-10">
-                            <!--begin::Title-->
-                            <div class="fs-1 fs-lg-2qx fw-bolder text-white mb-2">Sambutan Rektor, <br>
-                                <span class="fw-normal">Prof. Dr. Ir. H. Husain Syam, M.TP., IPU, ASEAN.Eng.</span>
-                            </div>
-                            <!--end::Title-->
-                            <!--begin::Description-->
-                            <div class="fs-6 fs-lg-5 text-white fw-bold opacity-75" style="text-align: justify;">"Tracer
-                                study merupakan survei alumni dengan tujuan menggali informasi yang berkaitan dengan
-                                perjalanan lulusan, mulai dari saat mereka menyelesaikan masa pendidikannya di perguruan
-                                tinggi (PT) sampai pada waktu pelaksanaan survei. Data dan informasi yang alumni berikan
-                                sangat bermanfaat untuk keperluan evaluasi hasil pendidikan tinggi, penyempurnaan dan
-                                penjaminan kualitas lembaga pendidikan tinggi dan relevansi pendidikan tinggi, informasi
-                                bagi para pemangku kepentingan (stakeholders), kelengkapan persyaratan bagi akreditasi
-                                pendidikan tinggi serta yang paling penting adalah sebagai pemenuhan indikator kinerja utama
-                                perguruan tinggi."</div>
-                            <!--end::Description-->
-                        </div>
-                        <!--end::Content-->
-                        <!--begin::Link-->
-                        {{-- <a href="https://1.envato.market/EA4JP" class="btn btn-lg btn-outline border-2 btn-outline-white flex-shrink-0 my-2">Purchase on Themeforest</a> --}}
-                        <div class="text-center w-100">
-                            {{-- <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-lg-100 min-h-350px" style="background-image:url('assets/media/husain-unm-depan.png')"></div> --}}
-                            <img src="assets/media/husain-unm-depan1.png" class="" alt=""
-                                style="max-width: 300px;border-radius: 0.625rem;">
-                        </div>
-                        <!--end::Link-->
-                    </div>
-                    <!--end::Highlight-->
+               
                 </div>
                 <!--end::Landing hero-->
             </div>
+            
             <!--end::Wrapper-->
             <!--begin::Curve bottom-->
             <div class="landing-curve landing-dark-color " style="margin-bottom: 13rem!important;">
@@ -220,7 +198,7 @@
           <br /><h2 class="text-white lh-base fw-bolder fs-1x fs-lg-1x mb-15">Merupakan Aplikasi Untuk Melakukan Tracing Terhadap Aktifitas Alumni/Lulusan Dari Universitas Negeri Makassar</h2>
           <!--end::Title-->
           <!--begin::Action-->
-          <a href="login" class="btn btn-primary">Mulai Mengisi</a>
+          <a href="login" class="btn btn-sm btn-primary">Mulai Mengisi</a>
           <a href="survei-pengguna-lulusan" class="btn btn-secondary">Survei Pengguna Lulusan</a>
           <!--end::Action-->
         </div>
@@ -268,13 +246,8 @@
       <!--begin::Heading-->
       <div class="text-center mb-12">
         <!--begin::Title-->
-        <h3 class="fs-2hx text-dark mb-5" id="petunjuk" data-kt-scroll-offset="{default: 100, lg: 150}">Petunjuk Pengisian
-         </h3>
-        <!--end::Title-->
-        <!--begin::Sub-title-->
-        <div class="fs-5 text-muted fw-bold"> Berikut Merupakan Tahapan Pengisian Tracer Study UNM
-
-        </div>
+     
+      
         <!--end::Header Section-->
         <!--begin::Team Section-->
         <div class="" style="margin-top: 4%;">
@@ -409,7 +382,7 @@
         <!--begin::Statistics Section-->
         <div class="0">
             <!--begin::Curve top-->
-            <div class="landing-curve landing-dark-color">
+            <div  class="landing-curve landing-dark-color">
                 <svg viewBox="15 -1 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M1 48C4.93573 47.6644 8.85984 47.3311 12.7725 47H1489.16C1493.1 47.3311 1497.04 47.6644 1501 48V47H1489.16C914.668 -1.34764 587.282 -1.61174 12.7725 47H1V48Z"
@@ -418,138 +391,128 @@
             </div>
             <!--end::Curve top-->
             <!--begin::Wrapper-->
-            <div class="pb-15 pt-18 landing-dark-bg">
+            <div class="pb-15 pt-18 landing-dark-bg" style="background-color: #019D50">
                 <!--begin::Container-->
                 <div class="container">
                     <!--begin::Heading-->
-                    <div class="text-center mt-15 mb-18" id="lulusan" data-kt-scroll-offset="{default: 100, lg: 150}">
-                        <!--begin::Title-->
-                        <h3 class="fs-2hx text-white fw-bolder mb-5">Jumlah Lulusan Tahunan</h3>
-                        <!--end::Title-->
-                        <!--begin::Description-->
-                        <div class="fs-5 text-gray-700 fw-bold">Save thousands to millions of bucks by using single tool
-                            <br />for different amazing and great useful admin
+                    <div class="card bg-light mb-18">
+                        <!--begin::Body-->
+                        <div class="card-body py-15">
+                            <!--begin::Wrapper-->
+                            <div class="d-flex flex-center">
+                                <!--begin::Items-->
+                                <div class="d-flex justify-content-between mb-10 mx-auto w-xl-900px">
+                                    <!--begin::Item-->
+                                    <div class="octagon d-flex flex-center h-200px w-200px bg-body mx-2">
+                                        <!--begin::Content-->
+                                        <div class="text-center">
+                                            <!--begin::Symbol-->
+                                            <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
+                                            <span class="svg-icon svg-icon-2tx svg-icon-primary">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="2" y="2" width="9" height="9" rx="2" fill="currentColor"></rect>
+                                                    <rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="currentColor"></rect>
+                                                    <rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="currentColor"></rect>
+                                                    <rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="currentColor"></rect>
+                                                </svg>
+                                            </span>
+                                            <!--end::Svg Icon-->
+                                            <!--end::Symbol-->
+                                            <!--begin::Text-->
+                                            <div class="mt-1">
+                                                <!--begin::Animation-->
+                                                <div class="fs-lg-2hx fs-2x fw-bold text-gray-800 d-flex align-items-center">
+                                                <div class="min-w-70px counted" data-kt-countup="true" data-kt-countup-value="700" data-kt-initialized="1">700</div>+</div>
+                                                <!--end::Animation-->
+                                                <!--begin::Label-->
+                                                <span class="text-gray-600 fw-semibold fs-5 lh-0">Businesses</span>
+                                                <!--end::Label-->
+                                            </div>
+                                            <!--end::Text-->
+                                        </div>
+                                        <!--end::Content-->
+                                    </div>
+                                    <!--end::Item-->
+                                    <!--begin::Item-->
+                                    <div class="octagon d-flex flex-center h-200px w-200px bg-body mx-2">
+                                        <!--begin::Content-->
+                                        <div class="text-center">
+                                            <!--begin::Symbol-->
+                                            <!--begin::Svg Icon | path: icons/duotune/graphs/gra008.svg-->
+                                            <span class="svg-icon svg-icon-2tx svg-icon-success">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M13 10.9128V3.01281C13 2.41281 13.5 1.91281 14.1 2.01281C16.1 2.21281 17.9 3.11284 19.3 4.61284C20.7 6.01284 21.6 7.91285 21.9 9.81285C22 10.4129 21.5 10.9128 20.9 10.9128H13Z" fill="currentColor"></path>
+                                                    <path opacity="0.3" d="M13 12.9128V20.8129C13 21.4129 13.5 21.9129 14.1 21.8129C16.1 21.6129 17.9 20.7128 19.3 19.2128C20.7 17.8128 21.6 15.9128 21.9 14.0128C22 13.4128 21.5 12.9128 20.9 12.9128H13Z" fill="currentColor"></path>
+                                                    <path opacity="0.3" d="M11 19.8129C11 20.4129 10.5 20.9129 9.89999 20.8129C5.49999 20.2129 2 16.5128 2 11.9128C2 7.31283 5.39999 3.51281 9.89999 3.01281C10.5 2.91281 11 3.41281 11 4.01281V19.8129Z" fill="currentColor"></path>
+                                                </svg>
+                                            </span>
+                                            <!--end::Svg Icon-->
+                                            <!--end::Symbol-->
+                                            <!--begin::Text-->
+                                            <div class="mt-1">
+                                                <!--begin::Animation-->
+                                                <div class="fs-lg-2hx fs-2x fw-bold text-gray-800 d-flex align-items-center">
+                                                <div class="min-w-50px counted" data-kt-countup="true" data-kt-countup-value="80" data-kt-initialized="1">80</div>K+</div>
+                                                <!--end::Animation-->
+                                                <!--begin::Label-->
+                                                <span class="text-gray-600 fw-semibold fs-5 lh-0">Quick Reports</span>
+                                                <!--end::Label-->
+                                            </div>
+                                            <!--end::Text-->
+                                        </div>
+                                        <!--end::Content-->
+                                    </div>
+                                    <!--end::Item-->
+                                    <!--begin::Item-->
+                                    <div class="octagon d-flex flex-center h-200px w-200px bg-body mx-2">
+                                        <!--begin::Content-->
+                                        <div class="text-center">
+                                            <!--begin::Symbol-->
+                                            <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
+                                            <span class="svg-icon svg-icon-2tx svg-icon-info">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M21 10H13V11C13 11.6 12.6 12 12 12C11.4 12 11 11.6 11 11V10H3C2.4 10 2 10.4 2 11V13H22V11C22 10.4 21.6 10 21 10Z" fill="currentColor"></path>
+                                                    <path opacity="0.3" d="M12 12C11.4 12 11 11.6 11 11V3C11 2.4 11.4 2 12 2C12.6 2 13 2.4 13 3V11C13 11.6 12.6 12 12 12Z" fill="currentColor"></path>
+                                                    <path opacity="0.3" d="M18.1 21H5.9C5.4 21 4.9 20.6 4.8 20.1L3 13H21L19.2 20.1C19.1 20.6 18.6 21 18.1 21ZM13 18V15C13 14.4 12.6 14 12 14C11.4 14 11 14.4 11 15V18C11 18.6 11.4 19 12 19C12.6 19 13 18.6 13 18ZM17 18V15C17 14.4 16.6 14 16 14C15.4 14 15 14.4 15 15V18C15 18.6 15.4 19 16 19C16.6 19 17 18.6 17 18ZM9 18V15C9 14.4 8.6 14 8 14C7.4 14 7 14.4 7 15V18C7 18.6 7.4 19 8 19C8.6 19 9 18.6 9 18Z" fill="currentColor"></path>
+                                                </svg>
+                                            </span>
+                                            <!--end::Svg Icon-->
+                                            <!--end::Symbol-->
+                                            <!--begin::Text-->
+                                            <div class="mt-1">
+                                                <!--begin::Animation-->
+                                                <div class="fs-lg-2hx fs-2x fw-bold text-gray-800 d-flex align-items-center">
+                                                <div class="min-w-50px counted" data-kt-countup="true" data-kt-countup-value="35" data-kt-initialized="1">35</div>M+</div>
+                                                <!--end::Animation-->
+                                                <!--begin::Label-->
+                                                <span class="text-gray-600 fw-semibold fs-5 lh-0">Payments</span>
+                                                <!--end::Label-->
+                                            </div>
+                                            <!--end::Text-->
+                                        </div>
+                                        <!--end::Content-->
+                                    </div>
+                                    <!--end::Item-->
+                                </div>
+                                <!--end::Items-->
+                            </div>
+                            <!--end::Wrapper-->
+                            <!--begin::Testimonial-->
+                            <div class="fs-2 fw-semibold text-muted text-center mb-3">
+                            <span class="fs-1 lh-1 text-gray-700">“</span>When you care about your topic, you’ll write about it in a 
+                            <br>
+                            <span class="text-gray-700 me-1">more powerful</span>, emotionally expressive way 
+                            <span class="fs-1 lh-1 text-gray-700">“</span></div>
+                            <!--end::Testimonial-->
+                            <!--begin::Author-->
+                            <div class="fs-2 fw-semibold text-muted text-center">
+                                <a href="/metronic8/demo16/../demo16/account/security.html" class="link-primary fs-4 fw-bold">Marcus Levy</a>
+                                <span class="fs-4 fw-bold text-gray-600">,KeenThemes CEO</span>
+                            </div>
+                            <!--end::Author-->
                         </div>
-                        <!--end::Description-->
+                        <!--end::Body-->
                     </div>
-                    <!--end::Heading-->
-                    <!--begin::Statistics-->
-                    <div class="d-flex flex-center">
-                        <!--begin::Items-->
-                        <div class="d-flex flex-wrap flex-center justify-content-lg-between mb-15 mx-auto w-xl-900px">
-                            <!--begin::Item-->
-                            <div class="d-flex flex-column flex-center h-200px w-200px h-lg-250px w-lg-250px m-3 bgi-no-repeat bgi-position-center bgi-size-contain"
-                                style="background-image: url('assets/media/svg/misc/octagon.svg')">
-                                <!--begin::Symbol-->
-                                <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
-                                <span class="svg-icon svg-icon-2tx svg-icon-white mb-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                        viewBox="0 0 24 24" fill="none">
-                                        <rect x="2" y="2" width="9" height="9"
-                                            rx="2" fill="black" />
-                                        <rect opacity="0.3" x="13" y="2" width="9"
-                                            height="9" rx="2" fill="black" />
-                                        <rect opacity="0.3" x="13" y="13" width="9"
-                                            height="9" rx="2" fill="black" />
-                                        <rect opacity="0.3" x="2" y="13" width="9"
-                                            height="9" rx="2" fill="black" />
-                                    </svg>
-                                </span>
-                                <!--end::Svg Icon-->
-                                <div class="mb-0">
-                                    <!--begin::Value-->
-                                    <div class="fs-lg-2hx fs-2x fw-bolder text-white d-flex flex-center">
-                                        <div class="min-w-70px" data-kt-countup="true" data-kt-countup-value="3876"
-                                            data-kt-countup-suffix="">0</div>
-                                    </div>
-                                    <!--end::Value-->
-                                    <!--begin::Label-->
-                                    <span class="text-gray-600 fw-bold fs-5 lh-0">Lulusan Tahun 2019</span>
-                                    <!--end::Label-->
-                                </div>
-                                <!--end::Info-->
-                            </div>
-                            <!--end::Item-->
-                            <!--begin::Item-->
-                            <div class="d-flex flex-column flex-center h-200px w-200px h-lg-250px w-lg-250px m-3 bgi-no-repeat bgi-position-center bgi-size-contain"
-                                style="background-image: url('assets/media/svg/misc/octagon.svg')">
-                                <!--begin::Symbol-->
-                                <!--begin::Svg Icon | path: icons/duotune/graphs/gra008.svg-->
-                                <span class="svg-icon svg-icon-2tx svg-icon-white mb-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                        viewBox="0 0 24 24" fill="none">
-                                        <path
-                                            d="M13 10.9128V3.01281C13 2.41281 13.5 1.91281 14.1 2.01281C16.1 2.21281 17.9 3.11284 19.3 4.61284C20.7 6.01284 21.6 7.91285 21.9 9.81285C22 10.4129 21.5 10.9128 20.9 10.9128H13Z"
-                                            fill="black" />
-                                        <path opacity="0.3"
-                                            d="M13 12.9128V20.8129C13 21.4129 13.5 21.9129 14.1 21.8129C16.1 21.6129 17.9 20.7128 19.3 19.2128C20.7 17.8128 21.6 15.9128 21.9 14.0128C22 13.4128 21.5 12.9128 20.9 12.9128H13Z"
-                                            fill="black" />
-                                        <path opacity="0.3"
-                                            d="M11 19.8129C11 20.4129 10.5 20.9129 9.89999 20.8129C5.49999 20.2129 2 16.5128 2 11.9128C2 7.31283 5.39999 3.51281 9.89999 3.01281C10.5 2.91281 11 3.41281 11 4.01281V19.8129Z"
-                                            fill="black" />
-                                    </svg>
-                                </span>
-                                <!--end::Svg Icon-->
-                                <!--end::Symbol-->
-                                <!--begin::Info-->
-                                <div class="mb-0">
-                                    <!--begin::Value-->
-                                    <div class="fs-lg-2hx fs-2x fw-bolder text-white d-flex flex-center">
-                                        <div class="min-w-70px" data-kt-countup="true" data-kt-countup-value="2302"
-                                            data-kt-countup-suffix="">0</div>
-                                    </div>
-                                    <!--end::Value-->
-                                    <!--begin::Label-->
-                                    <span class="text-gray-600 fw-bold fs-5 lh-0">Lulusan Tahun 2020</span>
-                                    <!--end::Label-->
-                                </div>
-                                <!--end::Info-->
-                            </div>
-                            <!--end::Item-->
-                            <!--begin::Item-->
-                            <div class="d-flex flex-column flex-center h-200px w-200px h-lg-250px w-lg-250px m-3 bgi-no-repeat bgi-position-center bgi-size-contain"
-                                style="background-image: url('assets/media/svg/misc/octagon.svg')">
-                                <!--begin::Symbol-->
-                                <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
-                                <span class="svg-icon svg-icon-2tx svg-icon-white mb-3">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                        viewBox="0 0 24 24" fill="none">
-                                        <path
-                                            d="M21 10H13V11C13 11.6 12.6 12 12 12C11.4 12 11 11.6 11 11V10H3C2.4 10 2 10.4 2 11V13H22V11C22 10.4 21.6 10 21 10Z"
-                                            fill="black" />
-                                        <path opacity="0.3"
-                                            d="M12 12C11.4 12 11 11.6 11 11V3C11 2.4 11.4 2 12 2C12.6 2 13 2.4 13 3V11C13 11.6 12.6 12 12 12Z"
-                                            fill="black" />
-                                        <path opacity="0.3"
-                                            d="M18.1 21H5.9C5.4 21 4.9 20.6 4.8 20.1L3 13H21L19.2 20.1C19.1 20.6 18.6 21 18.1 21ZM13 18V15C13 14.4 12.6 14 12 14C11.4 14 11 14.4 11 15V18C11 18.6 11.4 19 12 19C12.6 19 13 18.6 13 18ZM17 18V15C17 14.4 16.6 14 16 14C15.4 14 15 14.4 15 15V18C15 18.6 15.4 19 16 19C16.6 19 17 18.6 17 18ZM9 18V15C9 14.4 8.6 14 8 14C7.4 14 7 14.4 7 15V18C7 18.6 7.4 19 8 19C8.6 19 9 18.6 9 18Z"
-                                            fill="black" />
-                                    </svg>
-                                </span>
-                                <!--end::Svg Icon-->
-                                <!--end::Symbol-->
-                                <!--begin::Info-->
-                                <div class="mb-0">
-                                    <!--begin::Value-->
-                                    <div class="fs-lg-2hx fs-2x fw-bolder text-white d-flex flex-center">
-                                        <div class="min-w-70px" data-kt-countup="true" data-kt-countup-value="5592"
-                                            data-kt-countup-suffix="">0</div>
-                                    </div>
-                                    <!--end::Value-->
-                                    <!--begin::Label-->
-                                    <span class="text-gray-600 fw-bold fs-5 lh-0">Lulusan Tahun 2021</span>
-                                    <!--end::Label-->
-                                </div>
-                                <!--end::Info-->
-                            </div>
-                            <!--end::Item-->
-                        </div>
-                        <!--end::Items-->
-                    </div>
-                    <!--end::Statistics-->
-                    <!--begin::Testimonial-->
-
-                    <!--end::Testimonial-->
-                    <!--begin::Author-->
 
                     <!--end::Author-->
                 </div>
