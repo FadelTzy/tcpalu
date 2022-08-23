@@ -113,7 +113,7 @@
                                     <i class="fa fa-bars"></i>
                                 </button>
                                 <a class="navbar-brand" href="index.html">
-                                    <img src="{{ asset('cleanu/assets/img/logo.png') }}" class="logo" alt="Logo">
+                                    <img src="{{ asset('assets/media/logos/logou.png') }}" class="logo" alt="Logo">
                                 </a>
                             </div>
                             <!-- End Header Navigation -->
@@ -122,7 +122,7 @@
                             <div class="col-lg-9">
                                 <div class="collapse navbar-collapse" id="navbar-menu">
                                     <ul class="nav navbar-nav navbar-left" data-in="fadeInDown" data-out="fadeOutUp">
-                                    
+
                                         <li>
                                             <a class="smooth-menu" href="#beranda">Beranda</a>
                                         </li>
@@ -147,8 +147,9 @@
                             <div class="col-lg-3">
                                 <div class="attr-nav">
                                     <ul>
-                                        <li class="search"><a href="{{url('login')}}" class="btn btn-theme primary effect btn-sm">Login</a></li>
-                                    
+                                        <li class="search"><a href="{{ url('login') }}"
+                                                class="btn btn-theme primary effect btn-sm">Login</a></li>
+
                                     </ul>
                                 </div>
                             </div>
@@ -176,8 +177,7 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
 
-                <div class="carousel-item active bg-cover"
-                    style="background-image: url(bg/bg-unisa.jpg);">
+                <div class="carousel-item active bg-cover" style="background-image: url(bg/bg-unisa.jpg);">
                     <div class="box-table">
                         <div class="box-cell shadow gradient">
                             <div class="container">
@@ -187,14 +187,19 @@
                                             <h2 data-animation="animated slideInRight">TRACER STUDY
                                             </h2>
                                             <h3 data-animation="animated slideInLeft">UNIVERSITAS ALKHAIRAAT PALU</h3>
-                                            <div class="bottom" data-animation="animated slideInUp">
-                                                <a class="btn btn-theme primary effect btn-md" href="#">Mulai
-                                                    Mengisi</a>
-                                                <a href="https://www.youtube.com/watch?v=owhuBrGIOsE"
-                                                    class="popup-youtube theme secondary relative video-play-button">
-                                                    <i class="fa fa-play"></i>
-                                                </a>
+                                            <div data-animation="animated slideInUp">
+                                                    
+                                                    <a class="btn btn-theme mb-0 primary effect btn-md" href="#">Mulai
+                                                        Mengisi Tracer Study</a>
+                                               
+                                                        <br>
+                                           
+                                                    <a class="btn mt-2 btn-sm btn-theme secondary effect btn-md" href="#">User Survei (Kepuasan Pengguna)</a>
+                                                           
+                                       
+
                                             </div>
+                                    
                                         </div>
                                     </div>
                                 </div>
@@ -266,16 +271,17 @@
                             </div>
                         </div>
                     </div>
-                
+
                 </div>
             </div>
         </div>
     </div>
     <!-- End About Area -->
 
-     <!-- Start Why Choose Us 
+    <!-- Start Why Choose Us
     ============================================= -->
-    <div id="Tentang" class="choseus-style-one-area bg-fixed default-padding" style="background-image: url(bg/mahasiswa-unisa.jpg);">
+    <div id="Tentang" class="choseus-style-one-area bg-fixed default-padding"
+        style="background-image: url(bg/mahasiswa-unisa.jpg);">
         <div class="angle-shape"></div>
         <div class="container">
             <div class="row">
@@ -286,27 +292,37 @@
                             <h2 class="heading text-white">Para Alumni yang terhormat </h2>
                             <ul class="text-white">
                                 <li>
-                                
-                                        <p class="text-white">
-                                            Tracer Study (Studi Penelusuran Alumni) Universitas Negeri Makassar merupakan survei yang dilakukan untuk mengukur proses pendidikan tinggi UNM dalam membekali para alumni untuk memasuki masa transisi dari dunia kampus ke dunia kerja. Selain itu, Tracer Study UNM juga bertujuan untuk mendapatkan masukan bagi perbaikan sistem pendidikan dan pembelajaran UNM.
 
-                                        </p>
+                                    <p class="text-white">
+                                        Tracer Study (Studi Penelusuran Alumni) Universitas Negeri Makassar merupakan
+                                        survei yang dilakukan untuk mengukur proses pendidikan tinggi UNM dalam
+                                        membekali para alumni untuk memasuki masa transisi dari dunia kampus ke dunia
+                                        kerja. Selain itu, Tracer Study UNM juga bertujuan untuk mendapatkan masukan
+                                        bagi perbaikan sistem pendidikan dan pembelajaran UNM.
+
+                                    </p>
                                 </li>
                                 <li>
-                                 
-                                        <p class="text-white">
-                                            Merupakan suatu hal yang membanggakan jika Anda bersedia meluangkan waktu sejenak untuk membantu Kami dalam pelaksanaan suatu survei yang ditujukan kepada seluruh alumni Universitas Negeri Makasar.
-                                        </p>
+
+                                    <p class="text-white">
+                                        Merupakan suatu hal yang membanggakan jika Anda bersedia meluangkan waktu
+                                        sejenak untuk membantu Kami dalam pelaksanaan suatu survei yang ditujukan kepada
+                                        seluruh alumni Universitas Negeri Makasar.
+                                    </p>
                                 </li>
                                 <li>
-                                 
-                                        <p class="text-white">
-                                            Partisipasi para alumni dalam mengisi kuesioner Tracer Study sangat berharga dalam memberikan kontribusi pengembangan dan peningkatan mutu pendidikan dan pembelajaran di Universitas Negeri Makassar di masa yang akan datang. Kami yakin Anda akan bersedia untuk saling berbagi dengan almamater Anda guna berlangsungnya proses peningkatan' mutu pendidikan secara berkelanjutan.
-                                        </p>
+
+                                    <p class="text-white">
+                                        Partisipasi para alumni dalam mengisi kuesioner Tracer Study sangat berharga
+                                        dalam memberikan kontribusi pengembangan dan peningkatan mutu pendidikan dan
+                                        pembelajaran di Universitas Negeri Makassar di masa yang akan datang. Kami yakin
+                                        Anda akan bersedia untuk saling berbagi dengan almamater Anda guna
+                                        berlangsungnya proses peningkatan' mutu pendidikan secara berkelanjutan.
+                                    </p>
                                 </li>
                             </ul>
                         </div>
-                     
+
                     </div>
                 </div>
             </div>
@@ -389,7 +405,7 @@
     <!-- End Process Area -->
 
 
-  <!-- Start Contact Area 
+    <!-- Start Contact Area
     ============================================= -->
     <div id="Kontak" class="contact-area bg-theme mb-5 text-light default-padding">
         <div class="container">
@@ -398,7 +414,7 @@
                     <div class="col-lg-4 info">
                         <div class="content text-light text-center">
                             <div class="thumb">
-                                <img src="{{asset('cleanu/assets/img/illustration/4.png')}}" alt="Thumb">
+                                <img src="{{ asset('cleanu/assets/img/illustration/4.png') }}" alt="Thumb">
                             </div>
                             <ul>
                                 <li>
@@ -420,13 +436,16 @@
                         <div class="form-box">
                             <h2>Kontak</h2>
                             <p>
-                                It's all about the humans behind a brand and those experiencing it, we're right there. In the middle performance quick.
+                                It's all about the humans behind a brand and those experiencing it, we're right there.
+                                In the middle performance quick.
                             </p>
-                            <form action="https://validthemes.online/themeforest/cleanu/assets/mail/contact.php" method="POST" class="contact-form">
+                            <form action="https://validthemes.online/themeforest/cleanu/assets/mail/contact.php"
+                                method="POST" class="contact-form">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="form-group">
-                                            <input class="form-control" id="name" name="name" placeholder="Name" type="text">
+                                            <input class="form-control" id="name" name="name"
+                                                placeholder="Name" type="text">
                                             <span class="alert-error"></span>
                                         </div>
                                     </div>
@@ -434,13 +453,15 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <input class="form-control" id="email" name="email" placeholder="Email*" type="email">
+                                            <input class="form-control" id="email" name="email"
+                                                placeholder="Email*" type="email">
                                             <span class="alert-error"></span>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <input class="form-control" id="phone" name="phone" placeholder="Phone" type="text">
+                                            <input class="form-control" id="phone" name="phone"
+                                                placeholder="Phone" type="text">
                                             <span class="alert-error"></span>
                                         </div>
                                     </div>
@@ -472,14 +493,14 @@
     </div>
     <!-- End Contact Area -->
 
- 
+
 
 
     <!-- Start Footer
     ============================================= -->
     <footer class="bg-theme text-light">
         <!-- illustration -->
-      
+
         <!-- End illustration -->
         <div class="container">
             <div class="f-items default-padding">
@@ -582,10 +603,10 @@
                 </div>
             </div>
         </div>
-     
+
         <!-- Fixed Shape -->
         <div class="fixed-shape-left">
-            <img src="{{asset('cleanu/assets/img/shape/5.png')}}" alt="Shape">
+            <img src="{{ asset('cleanu/assets/img/shape/5.png') }}" alt="Shape">
         </div>
         <!-- End Fixed Shape -->
     </footer>
