@@ -113,7 +113,8 @@
                                     <i class="fa fa-bars"></i>
                                 </button>
                                 <a class="navbar-brand" href="index.html">
-                                    <img src="{{ asset('assets/media/logos/logou.png') }}" class="logo" alt="Logo">
+                                    <img src="{{ asset('assets/media/logos/logou.png') }}" class="logo"
+                                        alt="Logo">
                                 </a>
                             </div>
                             <!-- End Header Navigation -->
@@ -147,7 +148,7 @@
                             <div class="col-lg-3">
                                 <div class="attr-nav">
                                     <ul>
-                                        <li class="search"><a href="{{ url('login') }}"
+                                        <li><a href="{{ url('login') }}"
                                                 class="btn btn-theme primary effect btn-sm">Login</a></li>
 
                                     </ul>
@@ -188,18 +189,20 @@
                                             </h2>
                                             <h3 data-animation="animated slideInLeft">UNIVERSITAS ALKHAIRAAT PALU</h3>
                                             <div data-animation="animated slideInUp">
-                                                    
-                                                    <a class="btn btn-theme mb-0 primary effect btn-md" href="#">Mulai
-                                                        Mengisi Tracer Study</a>
-                                               
-                                                        <br>
-                                           
-                                                    <a class="btn mt-2 btn-sm btn-theme secondary effect btn-md" href="#">User Survei (Kepuasan Pengguna)</a>
-                                                           
-                                       
+
+                                                <a class="btn btn-theme mb-0 primary effect btn-md"
+                                                    href="{{ url('login') }}">Mulai
+                                                    Mengisi Tracer Study</a>
+
+                                                <br>
+
+                                                <a class="btn mt-2 btn-sm btn-theme secondary effect btn-md"
+                                                    href="#">User Survei (Kepuasan Pengguna)</a>
+
+
 
                                             </div>
-                                    
+
                                         </div>
                                     </div>
                                 </div>
