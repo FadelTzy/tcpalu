@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
+use App\Models\Prodi;
 use App\Models\SurveiPengguna;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -17,7 +18,8 @@ class SurveiController extends Controller
     public function index()
     {
         //
-        return view('survei');
+        $data = Prodi::get();
+        return view('survei2',compact('data'));
     }
     public function report(Request $request)
     {
