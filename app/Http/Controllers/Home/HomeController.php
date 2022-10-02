@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
+use App\Models\Prodi;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -19,8 +20,10 @@ class HomeController extends Controller
     {
         return view('kuesioner');
     }
-    // public function survei()
-    // {
-    //     return view('survei');
-    // }
+    public function survei()
+    {
+        $data= Prodi::get();
+        return view('survei2',compact('data'));
+    }
+    
 }

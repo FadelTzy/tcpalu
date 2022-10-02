@@ -189,12 +189,12 @@
                                             <h3 data-animation="animated slideInLeft">UNIVERSITAS ALKHAIRAAT PALU</h3>
                                             <div data-animation="animated slideInUp">
                                                     
-                                                    <a class="btn btn-theme mb-0 primary effect btn-md" href="#">Mulai
+                                                    <a class="btn btn-theme mb-0 primary effect btn-md" href="{{ url('login') }}">Mulai
                                                         Mengisi Tracer Study</a>
                                                
                                                         <br>
                                            
-                                                    <a class="btn mt-2 btn-sm btn-theme secondary effect btn-md" href="#">User Survei (Kepuasan Pengguna)</a>
+                                                    <a class="btn mt-2 btn-sm btn-theme secondary effect btn-md" href="{{ url('survei') }}">User Survei (Kepuasan Pengguna)</a>
                                                            
                                        
 

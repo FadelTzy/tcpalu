@@ -44,6 +44,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/home', [HomeController::class, 'index']);
 Route::get('/survei-pengguna-lulusan', [HomeController::class, 'kuesioner']);
+Route::get('/survei2', [HomeController::class, 'survei']);
 
 Route::get('/users/export/', [CUser::class, 'export']);
 Route::get('/kuesioner/export/', [CRekap::class, 'export']);

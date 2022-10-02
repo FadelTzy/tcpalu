@@ -4,6 +4,8 @@
 
 
     </style>
+        <link href="{{ asset('assets/plugins/select2/css/select2.min.css') }}" rel="stylesheet" />
+        <link href="{{ asset('assets/plugins/select2/css/select2-bootstrap4.css') }}" rel="stylesheet" />
 @endsection
 @section('title')
     UNM::Tracer Studi
@@ -260,8 +262,14 @@
                                                     </th>
                                                     <th style="width:5%">: </th>
 
-                                                    <th style="width: 65%"> <input type="text"
-                                                            class="form-control form-sm" name="programStudi" id="programStudi">
+                                                    <th style="width: 65%"> 
+                                                        <select name="programStudi" class="single-select form-control " id="programStudi">
+                                                            <option selected disabled>Pilih Program Studi</option>
+                                                            @foreach ($data as $item)
+                                                                <option value="{{$item->nama_prodi}}">{{$item->nama_prodi}}</option>
+                                                            @endforeach
+                                                        </select>
+                                                     
                                                     </th>
 
                                                 </tr>
@@ -1213,11 +1221,16 @@
 
 @push('prepend-script')
     <!-- Vendor js -->
+    <script src="{{ asset('assets/plugins/select2/js/select2.min.js') }}"></script>
+
     <script src="assets/js/vendor.min.js"></script>
 @endpush
 @push('addon-script')
 <script>
-    
+      $('.single-select').select2({
+            theme: 'bootstrap4',
+            placeholder: $(this).data('placeholder'),
+        });
   $('.kirim-survei').click(function() {
     var formData = new FormData($('#formSurvei')[0]);
         formData.append("_token", "{{ csrf_token() }}");
