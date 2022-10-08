@@ -197,7 +197,7 @@
                                                 <br>
 
                                                 <a class="btn mt-2 btn-sm btn-theme secondary effect btn-md"
-                                                    href="#">User Survei (Kepuasan Pengguna)</a>
+                                                    href="{{ url('survei2') }}">User Survei (Kepuasan Pengguna)</a>
 
 
 
